@@ -1,3 +1,18 @@
+window.addEventListener("load", function(event){
+    var LKSumme = 0;
+    var GKSumme = 0;
+    var GKextraSumme = 0;
+    var pruefungenSumme = 0;
+    var summeGesamt = 0;
+    
+    berechneFach();
+    LKSumme = berechneLK();
+    GKSumme = berechneGK();
+    GKextraSumme = berechneweitereGK();
+    pruefungenSumme = berechnePruefungen();
+    summeGesamt = berechneSumme(LKSumme, GKSumme, GKextraSumme, pruefungenSumme);
+    gesamtNote = berechneNote(summeGesamt);
+})
 window.addEventListener("input", function(event) {
     var LKSumme = 0;
     var GKSumme = 0;
@@ -257,6 +272,4 @@ function berechneNote(summeGesamt) {
         summeNote.value = "nicht bestanden";
         return note;
     }
-
-    
 }
