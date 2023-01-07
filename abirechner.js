@@ -272,4 +272,6 @@ function berechneNote(summeGesamt) {
         summeNote.value = "nicht bestanden";
         return note;
     }
+
+    
 }
